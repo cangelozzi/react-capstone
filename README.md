@@ -14,3 +14,8 @@ Sample test/playground application built around React and Redux libraries.
 
 Practice the use and structure of React/Redux application; in addition to discover and practice other module and libraries that have been integrated.
 I see the app as a good reference point to develop in the future.
+
+### UP & RUNNING
+* `npm install`
+* `npm start`
+* visit `http://localhost:8080/`
