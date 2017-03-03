@@ -34,10 +34,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist', // Target directory of the build code
-    hot: true, // Enable hot loader
-    historyApiFallback: true,
-    compress: true,
-    port: 8080,
+    hot: true // Enable hot loader
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin() // Include the React hot loader plugin
