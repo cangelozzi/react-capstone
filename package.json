@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "http-server -p 3000 dist",
-    "start": "webpack-dev-server --progress --colors --hot",
+    "start": "webpack-dev-server --progress --colors --hot --history-api-fallback",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "coverage": "node_modules/.bin/babel-node node_modules/isparta/bin/isparta cover --report html node_modules/mocha/bin/_mocha -- --reporter dot --require ./test/test_helper.js 'test/**/*.js'"
   },

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import {Router, Link} from 'react-router';
-import history from '../constants/History';
+// import history from '../constants/History';
 
 const ACTIVE = {active: 'active'};
 //TODO: break NavigationBar component into smaller components so that testing is simpler

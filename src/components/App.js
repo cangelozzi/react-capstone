@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import NavigationBar from './NavigationBar';
 import Index from './Index';
-export class App extends Component {
+export class App extends React.Component {
 
   render() {
     return (

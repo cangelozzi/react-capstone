@@ -7,8 +7,8 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [ // Load webpac-dev-server and webpack modules. Load index.js as entry point.
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    // 'webpack-dev-server/client?http://localhost:8080',
+    // 'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   module: {
@@ -34,7 +34,10 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist', // Target directory of the build code
-    hot: true // Enable hot loader
+    // hot: true, // Enable hot loader
+    historyApiFallback: true,
+    compress: true,
+    port: 8080
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin() // Include the React hot loader plugin

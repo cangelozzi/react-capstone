@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import Router, {Route} from 'react-router';
-import history from './constants/History';
+import {Router, Route, browserHistory} from 'react-router';
+// import history from './constants/History';
 import buildStore from './store/buildStore';
 import {App} from './components/App';
 import {ArtistsContainer} from './components/Artists';
@@ -28,7 +28,7 @@ const routes = <Route path="/" component={App}>
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>{routes}</Router>
+    <Router history={browserHistory}>{routes}</Router>
   </Provider>,
   document.getElementById('app')
 );
