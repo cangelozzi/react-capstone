@@ -5,6 +5,8 @@
 
 var webpack = require('webpack');
 
+var dir = process.env.NODE_ENV === 'production' ? 'docs' : 'dist';
+
 module.exports = {
   entry: [ // Load webpac-dev-server and webpack modules. Load index.js as entry point.
     // 'webpack-dev-server/client?http://localhost:8080',
@@ -28,12 +30,12 @@ module.exports = {
     extensions: ['', '.js']
   },
   output: {
-    path: __dirname + '/dist', // Location for the built files
+    path: __dirname + '/' + dir, // Location for the built files
     publicPath: '/',
     filename: 'bundle.js' // Name of the JS bundle file
   },
   devServer: {
-    contentBase: './dist', // Target directory of the build code
+    contentBase: './' + dir, // Target directory of the build code
     // hot: true, // Enable hot loader
     historyApiFallback: true,
     compress: true,
